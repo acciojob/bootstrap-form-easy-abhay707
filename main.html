@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <form>
+    <form class="needs-validation" novalidate>
       <h1>Internship Form</h1>
       <div class="row">
         <div class="col mt-3">
@@ -24,6 +24,10 @@
             aria-label="First name"
             required
           />
+		<div class="invalid-feedback">
+	    First name required!=
+		  </div>
+			
         </div>
         <div class="col mt-3">
           <label for="last-name-input">Last Name</label>
@@ -34,6 +38,7 @@
             aria-label="Last name"
             required
           />
+		<div class="invalid-feedback">Last name required!</div>
         </div>
         <div class="col mt-3">
           <label for="email-input">Email Address</label>
@@ -45,13 +50,15 @@
             placeholder="xyz@gmail.com"
             required
           />
+			<div class="invalid-feedback">Email required!</div>
         </div>
       </div>
       <div class="row">
         <div class="col mt-3">
           <label for="college-input">College</label>
           <input id="college-input" type="text" class="form-control" required />
-        </div>
+       <div class="invalid-feedback">Please provide a valid college.</div>
+		</div>
         <div class="col mt-3">
           <label for="inputGroupSelect02">Graduation Year</label><br />
           <select class="form-select" id="inputGroupSelect02" required>
@@ -65,6 +72,9 @@
         <div class="col mt-3">
           <label for="roll-no-input">Roll No.</label><br />
           <input id="roll-no-input" type="number" class="form-control" required />
+			<div class="invalid-feedback">
+				Please provide a valid Roll no.
+			</div>
         </div>
       </div>
       <div class="row">
